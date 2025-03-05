@@ -4,10 +4,10 @@ import React from "react";
 import SlotCounter from "react-slot-counter";
 
 const achievementsList = [
-    { metric: "Projects", value: "45" },
+    { metric: "Projects", value: "90" },
     { metric: "Designs", value: "58" },
     { metric: "Certifications", value: "6" },
-    { metric: "Years", value: "4" }
+    { metric: "Years", value: "5" }
 ];
 
 const AchievementsSection = () => {
