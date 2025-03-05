@@ -61,14 +61,13 @@ const HeroSection = () => {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="col-span-4 place-self-center mt-8 lg:mt-0">
-                    <div className="rounded-full  w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+                    className="col-span-4 place-self-center mt-3">
+                    <div className="rounded-full w-[400px] h-[400px] sm:w-[350px] sm:h-[350px] lg:w-[800px] lg:h-[800px] relative overflow-hidden">
                         <Image
-                            src="/images/hero-image.png"
+                            src="/images/hero-image2.png"
                             alt="hero image"
-                            className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                            width={330}
-                            height={620}
+                            className="object-cover"
+                            fill
                         />
                     </div>
                 </motion.div>
