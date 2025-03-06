@@ -15,44 +15,39 @@ const HeroSection = () => {
                     transition={{ duration: 0.5 }}
                     className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
                     <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-700">
-                            Hello, I&apos;m
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+                            Hello, I&apos;m{" "}
                         </span>
                         <br></br>
-                        <span className="text-2xl sm:text-3xl lg:text-7xl">
-                            <TypeAnimation
-                                sequence={[
-                                    "Danny Ken",
-                                    2000,
-                                    "A Software Engineer",
-                                    2000,
-                                    "An Air Force Veteran",
-                                    2000
-                                ]}
-                                wrapper="span"
-                                speed={50}
-                                repeat={Infinity}
-                                className="text-inherit"
-                            />
-                        </span>
+                        <TypeAnimation
+                            sequence={[
+                                "Danny Ken",
+                                1000,
+                                "A Software Engineer",
+                                1000,
+                                "An Air Force Veteran",
+                                1000
+                            ]}
+                            wrapper="span"
+                            speed={50}
+                            repeat={Infinity}
+                        />
                     </h1>
                     <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-                        Director of Software Development | Delivering results through leadership and
-                        execution
+                        Engineering top-tier solutions with a commitment to quality, performance,
+                        and continuous improvement.
                     </p>
                     <div>
                         <Link
                             href="/#contact"
-                            className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-400 to-secondary-700 hover:bg-slate-200 text-white">
+                            className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white">
                             Contact Me
                         </Link>
                         <Link
                             href="/Danny Ken Resume- SW Developer.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-400 to-secondary-700 hover:bg-slate-800 text-white mt-3">
+                            className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3">
                             <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                                Resume
+                                Download CV
                             </span>
                         </Link>
                     </div>
@@ -61,13 +56,14 @@ const HeroSection = () => {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="col-span-4 place-self-center mt-3">
-                    <div className="rounded-full w-[400px] h-[400px] sm:w-[350px] sm:h-[350px] lg:w-[800px] lg:h-[800px] relative overflow-hidden">
+                    className="col-span-4 place-self-center mt-4 lg:mt-0">
+                    <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
                         <Image
-                            src="/images/hero-image2.png"
+                            src="/images/hero-image4.png"
                             alt="hero image"
-                            className="object-cover"
-                            fill
+                            className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            width={400}
+                            height={400}
                         />
                     </div>
                 </motion.div>
