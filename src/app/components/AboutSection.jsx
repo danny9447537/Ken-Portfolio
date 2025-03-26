@@ -2,6 +2,14 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import MotionParagraph from "../components/animations/MotionParagraph";
+
+const paragraphs = [
+    "👋 Hi, I’m Danny — a U.S. Air Force veteran turned Full Stack Developer and Software Development Leader with a passion for building scalable, cloud-native applications that make an impact.",
+    "I specialize in the MERN stack (MongoDB, Express, React, Node.js), React Native for mobile development, and modern cloud architectures using AWS, Azure, and Google Cloud. Over the past few years, I’ve grown from a hands-on developer into a director-level leader, building and guiding high-performing teams, mentoring junior engineers, and aligning technology with business strategy.",
+    "At ERA Solutions, I led the expansion of our development team from startup size to a full department of 37 engineers — implementing DevOps practices, architecting enterprise-grade solutions, and delivering custom platforms for veteran-owned businesses. I’ve also had the honor of creating a Registered Apprenticeship Program to help aspiring developers grow into their careers. My 8 years of military service shaped my leadership style — mission-driven, adaptable, and focused on outcomes. I bring that same discipline and mindset into every line of code, sprint, and system I help design.",
+    "🎯 Whether it’s launching a new product, scaling a dev team, or optimizing a deployment pipeline, I thrive at the intersection of strategy, execution, and mentorship."
+];
 
 const TAB_DATA = [
     {
@@ -115,20 +123,13 @@ const AboutSection = () => {
 
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
                     <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-                    <p className="text-base lg:text-lg">
-                        Versatile Full Stack Developer and technology leader with a strong
-                        foundation in software development and IT strategy. With experience spanning
-                        hands-on development and leadership roles, I specialize in building scalable
-                        web and mobile applications using the MERN stack, cloud architectures (AWS,
-                        Azure, Google Cloud), and modern DevOps practices. Previously, at Era
-                        Solutions LLC, I transitioned from a Full Stack Developer role to Director
-                        of Software Development, leading a team from a small startup to 37
-                        developers and overseeing cloud-based solutions for veteran-owned
-                        businesses. Passionate about innovation, mentorship, and delivering
-                        high-impact software solutions. Former U.S. Air Force veteran, bringing a
-                        disciplined and mission-focused approach to problem-solving and team
-                        leadership.
-                    </p>
+                    <div className="space-y-4">
+                        {paragraphs.map((text, index) => (
+                            <MotionParagraph key={index} index={index}>
+                                {text}
+                            </MotionParagraph>
+                        ))}
+                    </div>
                     <div className="flex flex-row justify-start mt-8">
                         <TabButton
                             selectTab={() => handleTabChange("skills")}
